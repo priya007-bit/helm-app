@@ -1,1 +1,24 @@
+{{- if .Values.b.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: b
+spec:
+  replicas: {{ .Values.b.replicaCount }}
+  selector:
+    matchLabels:
+      app: b
+  template:
+    metadata:
+      labels:
+        app: b
+    spec:
+      containers:
+        - name: b
+          image: "{{ .Values.b.image.repository }}:{{ .Values.b.image.tag }}"
+          imagePullPolicy: {{ .Values.b.image.pullPolicy }}
+          command: ["sh", "-c"]
+          args:
+            - while true; do echo "{{ .Values.b.message }}"; sleep 5; done
+{{- end }}
 
