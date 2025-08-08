@@ -1,18 +1,20 @@
+{{- if .Values.app1.enabled }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.app.name }}
+  name: {{ .Values.app1.name }}
 spec:
-  replicas: {{ .Values.app.replicaCount }}
+  replicas: {{ .Values.app1.replicaCount }}
   selector:
     matchLabels:
-      app: {{ .Values.app.name }}
+      app: {{ .Values.app1.name }}
   template:
     metadata:
       labels:
-        app: {{ .Values.app.name }}
+        app: {{ .Values.app1.name }}
     spec:
       containers:
-        - name: {{ .Values.app.name }}
-          image: "{{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}"
+        - name: {{ .Values.app1.name }}
+          image: "{{ .Values.app1.image.repository }}:{{ .Values.app1.image.tag }}"
+{{- end }}
 
