@@ -1,0 +1,10 @@
+app2:
+  enabled: true
+  name: app2
+  replicaCount: 2
+  image:
+    repository: httpd
+    tag: 2.4
+
+app1:
+  enabled: false
