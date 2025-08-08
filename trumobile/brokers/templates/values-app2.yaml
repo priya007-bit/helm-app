@@ -3,8 +3,8 @@ app2:
   name: app2
   replicaCount: 2
   image:
-    repository: nginx
-    tag: 1.21
+    repository: httpd
+    tag: 2.4
 
 app1:
   enabled: false
