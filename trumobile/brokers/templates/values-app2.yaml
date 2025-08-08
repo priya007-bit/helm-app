@@ -1,4 +1,5 @@
-app:
+app2:
+  enabled: true
   name: app2
   replicaCount: 2
   image:
