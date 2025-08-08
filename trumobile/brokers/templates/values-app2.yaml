@@ -5,3 +5,6 @@ app2:
   image:
     repository: nginx
     tag: 1.21
+
+app1:
+  enabled: false
