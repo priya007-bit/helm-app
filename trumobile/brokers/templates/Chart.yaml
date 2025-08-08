@@ -1,6 +1,0 @@
-apiVersion: v2
-name: shared-helm-app
-description: A Helm chart used by two apps
-type: application
-version: 0.1.0
-appVersion: "1.0"
