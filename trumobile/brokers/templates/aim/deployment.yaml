@@ -1,17 +1,19 @@
+{{- if .Values.app2.enabled }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.app.name }}
+  name: {{ .Values.app2.name }}
 spec:
-  replicas: {{ .Values.app.replicaCount }}
+  replicas: {{ .Values.app2.replicaCount }}
   selector:
     matchLabels:
-      app: {{ .Values.app.name }}
+      app: {{ .Values.app2.name }}
   template:
     metadata:
       labels:
-        app: {{ .Values.app.name }}
+        app: {{ .Values.app2.name }}
     spec:
       containers:
-        - name: {{ .Values.app.name }}
-          image: "{{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}"
+        - name: {{ .Values.app2.name }}
+          image: "{{ .Values.app2.image.repository }}:{{ .Values.app2.image.tag }}"
+{{- end }}
