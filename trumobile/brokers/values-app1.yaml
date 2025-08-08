@@ -1,6 +1,6 @@
 app1:
   enabled: true
-  name: app2
+  name: app1
   replicaCount: 2
   image:
     repository: httpd
