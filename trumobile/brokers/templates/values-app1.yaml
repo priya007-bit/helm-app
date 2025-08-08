@@ -1,6 +1,10 @@
-app:
-  name: app1
+app1:
+  enabled: true
+  name: app2
   replicaCount: 2
   image:
     repository: nginx
     tag: 1.21
+
+app2:
+  enabled: false
